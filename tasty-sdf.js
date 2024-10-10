@@ -14,7 +14,7 @@ function rotate2D(vec, theta, center = {x: 0, y: 0}) {
         x: rotatedX + center.x,
         y: rotatedY + center.y
     };
-  }
+}
 
 function rotate2DSimple(vec, theta) {
     const cosTheta = Math.cos(theta);
