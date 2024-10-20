@@ -8,6 +8,8 @@ function rotate2D(vec, theta, center = {x: 0, y: 0}) {
     const sinTheta = Math.sin(theta);
     const rotatedX = translatedX * cosTheta - translatedY * sinTheta;
     const rotatedY = translatedX * sinTheta + translatedY * cosTheta;
+
+    // Testing github connection
   
     // Translate back to original position
     return {
