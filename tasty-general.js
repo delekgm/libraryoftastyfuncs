@@ -64,3 +64,17 @@ const getBrightness = (hex) => {
     // Calculate brightness
     return (r + g + b) / 3;
   };
+
+  const randomInRange = (min, max) => {
+    return (Math.random() * (max - min)) + min;
+  }
+
+  function sampleRandom2D(centerX = 0, centerY = 0, maxRadius = 100, edgeBias = 1.0) {
+    let angle = Math.random() * Math.PI * 2;
+    // let radius =  Math.sqrt(Math.random()) * 100;
+    let u = Math.random();  // uniform random number between 0 and 1
+    let radius = maxRadius * Math.pow(u, edgeBias);  // Bias towards edge if power > 1
+    let x = radius * Math.cos(angle) + (width / 2) + centerX;
+    let y = radius * Math.sin(angle) + (width / 2) + centerY;
+    return {x, y};
+  }
